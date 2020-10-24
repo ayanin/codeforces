@@ -29,7 +29,11 @@ public class B {
 
             if (n % 2 != 0) {
                 int c = n / 2;
-                m[c][c] = 2;
+                m[c][c] = 1;
+                m[0][c] = 1;
+                m[c][0] = 1;
+                m[c][n - 1] = 1;
+                m[n - 1][c] = 1;
             }
 
             for (int j = 0; j < m.length; j++) {
